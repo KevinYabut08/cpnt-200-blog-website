@@ -14,7 +14,7 @@ import blogsVue from './blogs.vue';
     <div id="info">
       <img src="../public//Logo.png" alt="logo-travel-blog">
     </div>
-    <button @click="blogPage">BLOGS!</button>
+    <button><a href="../pages/blogs.vue">BLOGS!</a></button>
   </div>
 </template>
 
@@ -40,7 +40,13 @@ import blogsVue from './blogs.vue';
     width: 15vh;
     cursor: pointer;
   }
-
+  button a {
+    text-decoration: none;
+    color:#d4e3f0;
+  } 
+  button a:hover {
+    color:#294598;
+  }
   button:hover{
     color: #294598;
     border-radius: 5px;

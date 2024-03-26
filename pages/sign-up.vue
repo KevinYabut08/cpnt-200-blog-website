@@ -4,3 +4,4 @@
     <p>This is the sign up page content.</p>
   </div>
 </template>
+<script></script>

@@ -1,18 +1,18 @@
 <script setup>
-const client = useSupabaseAuthClient();
+const client = useSupabaseClient();
+const router = useRouter();
+
 const email = ref("");
 const password = ref(null);
 const errorMsg = ref(null);
-const successMsg = ref(null);
-
-async function signUp() {
+async function login() {
   try {
-    const { data, errors } = await client.auth.signUp({
+    let { error } = await client.auth.signInWithPassword({
       email: email.value,
       password: password.value,
     });
     if (error) throw error;
-    successMsg.value = "Check your email to confirm your account";
+    router.push("/pages/blogs.vue");
   } catch (error) {
     errorMsg.value = error.message;
   }
@@ -21,18 +21,23 @@ async function signUp() {
 <template>
   <main>
     <header>
-      <h1>Sign Up Page</h1>
+      <h1>Login Page</h1>
     </header>
     <form>
       <label for="email">
         Email:
-        <input type="email" name="email" v-model="email" />
+        <input type="email" name="email" id="email" v-model="email" />
       </label>
       <label for="password">
         Password:
-        <input type="password" name="password" v-model="password" />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          v-model="password"
+        />
       </label>
-      <button @click="signUp">Sign Up</button>
+      <input type="submit" value="login" @click="login" />
     </form>
   </main>
 </template>

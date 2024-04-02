@@ -7,15 +7,15 @@ async function logout() {
   try {
     const { error } = await client.auth.signOut();
     if (error) throw error;
-    router.push("/pages/login.vue");
+    router.push("/login");
   } catch (error) {}
 }
 </script>
 <template>
   <div>
+    <h3>Email:{{ user.email }}</h3>
+    <button @click="logout" type="button">Logout</button>
     <h1>BLOGS</h1>
-    <h2>Email: {{ user.email }}</h2>
-    <button @click="logout" type="button">Sign out</button>
     <div>
       <h2>Batanes:The Untouched Beauty of the North</h2>
       <p>
@@ -67,7 +67,7 @@ async function logout() {
       </p>
     </div>
     <div>
-      <h2>Discovering Palawan's Untouched Beauty</h2>
+      <h2>Puerto Princesa:Discovering Palawan's Untouched Beauty</h2>
       <p>
         Our adventure begins in Palawan, hailed as the "Last Frontier" of the
         Philippines. After landing in Puerto Princesa, we embark on a scenic
@@ -86,11 +86,16 @@ h1 {
   text-align: center;
   font-size: 50px;
 }
-h2 {
-  text-align: center;
+h3 {
+  text-align: start;
+  color: green;
 }
 p {
   text-align: start;
   margin: 100px;
+}
+button {
+  display: flex;
+  justify-content: start;
 }
 </style>

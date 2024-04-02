@@ -6,7 +6,7 @@
     <img src="../public//Logo.png" alt="logo-travel-blog" />
   </div>
   <div>
-    <button><a href="../pages/blogs.vue">BLOGS!</a></button>
+    <button><a href="./blogs.vue">BLOGS!</a></button>
   </div>
 </template>
 

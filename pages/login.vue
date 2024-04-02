@@ -12,7 +12,7 @@ async function login() {
       password: password.value,
     });
     if (error) throw error;
-    router.push("/pages/blogs.vue");
+    router.push("/blogs");
   } catch (error) {
     errorMsg.value = error.message;
   }
@@ -23,7 +23,7 @@ async function login() {
     <header>
       <h1>Login Page</h1>
     </header>
-    <form>
+    <form @submit.prevent="login">
       <label for="email">
         Email:
         <input type="email" name="email" id="email" v-model="email" />
@@ -41,3 +41,8 @@ async function login() {
     </form>
   </main>
 </template>
+<style>
+body {
+  text-align: center;
+}
+</style>

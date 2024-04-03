@@ -6,9 +6,6 @@
 
 <template>
   <NuxtLayout>
-  <div id="logo">
-    <img src="../public//Logo.png" alt="logo-travel-blog" />
-  </div>
   <div id="info">
     <img src="../public//Logo.png" alt="logo-travel-blog" />
   </div>
@@ -26,3 +23,16 @@
   <button type="button"><NuxtLink to="blog">Blogs</NuxtLink></button>
 </NuxtLayout>
 </template>
+<style scoped>
+  img {
+    height: 22vh;
+  }
+
+  button {
+    border-radius: 12px;
+    background: #7fb0d7;
+    border: none;
+    height: 5vh;
+    width: 12vh;
+  }
+</style>

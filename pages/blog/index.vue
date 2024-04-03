@@ -20,42 +20,7 @@ const { data: posts } = await useFetch("/api/blog", {
         locals for an authentic island experience unlike any other.
       </p>
     </div>
-    <div>
-      <h2>Siargao:Beyond the Surfing Mecca</h2>
-      <p>
-        While Siargao has gained fame as a surfing mecca, there's much more to
-        this tropical paradise than its legendary waves. Venture beyond the surf
-        breaks to discover hidden lagoons, secret waterfalls, and pristine
-        mangrove forests teeming with wildlife. Explore the laid-back villages
-        of General Luna and Pacifico, sample fresh seafood delicacies, and
-        embark on island-hopping adventures to deserted islets for a true taste
-        of island life in the Philippines.
-      </p>
-    </div>
-    <div>
-      <h2>Siquijor: The Mystical Island of Healing</h2>
-      <p>
-        Known as the "Island of Fire," Siquijor has long been shrouded in
-        mystery and intrigue. Beyond its reputation for mysticism and folk
-        healing, Siquijor boasts pristine beaches, enchanting waterfalls, and
-        lush inland forests waiting to be explored. Discover hidden caves, swim
-        in crystal-clear springs, and wander through centuries-old balete trees
-        while immersing yourself in the island's mystical charm and natural
-        beauty.
-      </p>
-    </div>
-    <div>
-      <h2>Dumaguete: Gateway to Adventure in Negros Oriental</h2>
-      <p>
-        Nestled on the southern coast of Negros Oriental, Dumaguete serves as a
-        gateway to some of the region's most underrated treasures. Explore the
-        underwater wonders of Apo Island, where vibrant coral reefs and diverse
-        marine life await snorkelers and divers alike. Trek to the breathtaking
-        Casaroro Falls, traverse the otherworldly landscapes of the Balinsasayao
-        Twin Lakes, and sample the region's delectable cuisine for a taste of
-        authentic Filipino hospitality.
-      </p>
-    </div>
+   
   </main>
   <div>
     <ul>
@@ -64,6 +29,8 @@ const { data: posts } = await useFetch("/api/blog", {
       </li>
     </ul>
   </div>
+  <button type="button"><NuxtLink to="landing-page">HOME</NuxtLink></button>
+
 </template>
 <style>
 h1 {
@@ -77,4 +44,11 @@ p {
   text-align: start;
   margin: 100px;
 }
+button {
+    border-radius: 12px;
+    background: #7fb0d7;
+    border: none;
+    height: 5vh;
+    width: 12vh;
+  }
 </style>

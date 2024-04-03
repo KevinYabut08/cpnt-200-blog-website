@@ -6,15 +6,22 @@
 
     <nav>
       <ul>
+        <li><NuxtLink to="landing-page">HOME</NuxtLink></li>
         <li><NuxtLink to="blog">Blogs</NuxtLink></li>
         <li><NuxtLink to="login">Login</NuxtLink></li>
-      
       </ul>
     </nav>
   </header>
 </template>
 
 <style scoped>
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10vh;
+    justify-content: center;
+    text-align: center;
+  } 
   img {
     height: 8vh;
     width: 27vh;

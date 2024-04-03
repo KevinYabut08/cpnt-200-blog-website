@@ -1,21 +1,7 @@
-<script setup>
-const user = useSupabaseUser();
-const client = useSupabaseClient();
-const router = useRouter();
 
-async function logout() {
-  try {
-    const { error } = await client.auth.signOut();
-    if (error) throw error;
-    router.push("/pages/login.vue");
-  } catch (error) {}
-}
-</script>
 <template>
-  <div>
+  <main>
     <h1>BLOGS</h1>
-    <h2>Email: {{ user.email }}</h2>
-    <button @click="logout" type="button">Sign out</button>
     <div>
       <h2>Batanes:The Untouched Beauty of the North</h2>
       <p>
@@ -66,20 +52,7 @@ async function logout() {
         authentic Filipino hospitality.
       </p>
     </div>
-    <div>
-      <h2>Discovering Palawan's Untouched Beauty</h2>
-      <p>
-        Our adventure begins in Palawan, hailed as the "Last Frontier" of the
-        Philippines. After landing in Puerto Princesa, we embark on a scenic
-        drive to El Nido, a breathtaking coastal town renowned for its towering
-        limestone cliffs and crystal-clear waters. Spend the day island-hopping,
-        snorkeling amidst colorful marine life, and soaking in the sun on
-        secluded beaches. Don't miss the chance to explore the mystical
-        underground river in Sabang, a UNESCO World Heritage Site and one of the
-        New Seven Wonders of Nature.
-      </p>
-    </div>
-  </div>
+  </main>
 </template>
 <style>
 h1 {

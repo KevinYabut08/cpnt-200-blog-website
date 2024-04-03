@@ -1,4 +1,8 @@
-
+<script setup>
+const { data: posts } = await useFetch("/api/blog", {
+  headers: useRequestHeaders(["cookie"]),
+});
+</script>
 <template>
   <main>
     <h1>BLOGS</h1>
@@ -53,6 +57,13 @@
       </p>
     </div>
   </main>
+  <div>
+    <ul>
+      <li v-for="(post, index) in posts" :key="index">
+        <NuxtLink :to="`/blog/${post.slug}`">{{ post.title }}</NuxtLink>
+      </li>
+    </ul>
+  </div>
 </template>
 <style>
 h1 {

@@ -23,6 +23,6 @@
     </p>
   </div>
 
-  <button type="button"><a href="/pages/blogs.vue">BLOGS!</a></button>
+  <button type="button"><NuxtLink to="blog">Blogs</NuxtLink></button>
 </NuxtLayout>
 </template>

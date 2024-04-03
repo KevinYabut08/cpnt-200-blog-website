@@ -7,13 +7,10 @@
     <nav>
       <ul>
         <li><NuxtLink to="/pages/blog">Blogs</NuxtLink></li>
-     </ul>
-    </nav>
-    <div>
-      <div>   
         <li><NuxtLink to="login">Login</NuxtLink></li>
-      </div>
-    </div>
+      
+      </ul>
+    </nav>
   </header>
 </template>
 

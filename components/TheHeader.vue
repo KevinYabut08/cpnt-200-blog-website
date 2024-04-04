@@ -9,6 +9,7 @@
         <li><NuxtLink to="landing-page">HOME</NuxtLink></li>
         <li><NuxtLink to="blog">Blogs</NuxtLink></li>
         <li><NuxtLink to="login">Login</NuxtLink></li>
+        <li><NuxtLink to="sign-up">Sign Up</NuxtLink></li>
       </ul>
     </nav>
   </header>

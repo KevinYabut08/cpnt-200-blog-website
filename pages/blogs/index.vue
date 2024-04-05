@@ -7,8 +7,8 @@ const { data: post } = await useFetch("/api/blog", {
   <main></main>
   <div>
     <ul>
-      <li v-for="(post, index) in posts" :key="index">
-        <NuxtLink :to="`/blogs/${post.slug}`">{{ post.title }}</NuxtLink>
+      <li v-for="(blogs, index) in posts" :key="index">
+        <NuxtLink :to="`/blogs/${blogs.slug}`">{{ blogs.title }}</NuxtLink>
       </li>
     </ul>
   </div>

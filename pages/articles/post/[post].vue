@@ -1,16 +1,15 @@
-<script setup>
-const route = useRoute();
-const supabase = useSupabaseClient();
-console.log(route.params.post);
-const { data: post } = await useAsyncData("post", async () => {
-  const { data } = await supabase
-    .from("blog")
-    .select("*")
-    .eq("slug", route.params.post)
-    .single();
-
-  return data;
-});
+<script>
+  export default {
+    async fetch() {
+      const blogsId = this.$route.params.id
+      this.blogs = await this.$supabase.from('blogs').select('*').eq('id', blogsId).single()
+    },
+    data() {
+      return {
+        post: {}
+      }
+    }
+  }
 </script>
 <template>
   <main>

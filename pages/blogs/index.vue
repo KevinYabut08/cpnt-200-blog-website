@@ -1,5 +1,5 @@
 <script setup>
-const { data: posts } = await useFetch("/api/blog", {
+const { data: post } = await useFetch("/api/blog", {
   headers: useRequestHeaders(["cookie"]),
 });
 </script>

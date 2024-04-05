@@ -4,7 +4,7 @@ export default defineEventHandler(async (event) => {
 
   const supabase = await serverSupabaseClient(event);
   const { data, error } = await supabase
-    .from("blog")
+    .from("blogs")
     .select("*")
     .eq("slug", slug)
     .single();

@@ -1,5 +1,6 @@
 <script setup>
 const supabase = useSupabaseClient();
+
 const { data: articles } = await useAsyncData("blogs", async () => {
   const { data } = await supabase.from("blogs").select("title");
   data.map((article) => {
@@ -7,7 +8,7 @@ const { data: articles } = await useAsyncData("blogs", async () => {
     article.slug = slug;
   });
   return data;
-});
+})
 </script>
 <template>
   <div>
@@ -62,9 +63,9 @@ const { data: articles } = await useAsyncData("blogs", async () => {
   <section>
     <ul>
       <li v-for="(article, index) in articles" :key="index">
-        <NuxtLink :to="`/articles/post/$article.slug`">
-          {{ article.title }}</NuxtLink
-        >
+        <NuxtLink :to="`/articles/post/${article.slug}`">
+          {{ article.title }}
+        </NuxtLink>
       </li>
     </ul>
   </section>

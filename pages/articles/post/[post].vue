@@ -1,21 +1,22 @@
 <script>
-  export default {
-    async fetch() {
-      const blogsId = this.$route.params.id
-      this.blogs = await this.$supabase.from('blogs').select('*').eq('id', blogsId).single()
-    },
-    data() {
-      return {
-        post: {}
-      }
-    }
-  }
+const route = useRoute();
+const supabase = useSupabaseClient();
+console.log(route.params.blogs);
+const { data: blogs } = await useAsyncData("blogs", async () => {
+  const { data } = await supabase
+  .from("blogs")
+  .select("*")
+  .eq("slug", route.params.blogs)
+  .single();
+
+  return data;
+})
 </script>
 <template>
   <main>
     <h1>{{ post.title }}</h1>
     <p>{{ post.content }}</p>
-    <p>Post Updated: {{ post.date_updated }}</p>
+    <p>Blog Last Update: {{ post.date_updated }}</p>
   </main>
 </template>
 <style>

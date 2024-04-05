@@ -18,9 +18,7 @@ const { data: posts } = await useFetch("/pages/blog", {
         globetrotters around the world.
       </p>
     </div>
-
-    <button type="button"><NuxtLink to="blog">Blogs</NuxtLink></button>
-  </main>
+ </main>
 </template>
 <style scoped>
 p {

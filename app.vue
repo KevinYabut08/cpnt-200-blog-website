@@ -1,10 +1,5 @@
-<script setup>
-  import { RouterView } from 'vue-router';
-</script>
 <template>
-  <RouterView />
   <TheHeader />
-  <NuxtPage />
+    <NuxtPage />
   <TheFooter />
-
 </template>

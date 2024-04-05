@@ -8,7 +8,6 @@ const { data: blogs } = await useAsyncData("blogs", async () => {
   .select("*")
   .eq("slug", route.params.blogs)
   .single();
-
   return data;
 })
 </script>

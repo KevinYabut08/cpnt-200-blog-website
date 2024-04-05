@@ -1,12 +1,12 @@
 <script>
 const route = useRoute();
 const supabase = useSupabaseClient();
-console.log(route.params.blogs);
-const { data: blogs } = await useAsyncData("blogs", async () => {
+console.log(route.params.post);
+const { data: post } = await useAsyncData("post", async () => {
   const { data } = await supabase
   .from("blogs")
   .select("*")
-  .eq("slug", route.params.blogs)
+  .eq("slug", route.params.post)
   .single();
   return data;
 })

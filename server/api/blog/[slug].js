@@ -9,8 +9,8 @@ export default defineEventHandler(async (event) => {
     .eq("slug", slug)
     .single();
 
-  if (error) {
-    console.error(error);
-  }
-  return data;
+    if (error) {
+      console.error(error);
+    }
+    return data;
 });

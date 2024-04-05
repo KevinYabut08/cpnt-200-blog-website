@@ -6,4 +6,4 @@ export default eventHandler(async (event) => {
   const { data } = await supabase.from("blogs").select("*");
 
   return data;
-})
+});

@@ -7,7 +7,6 @@
     <nav>
       <ul>
         <li><NuxtLink to="/">HOME</NuxtLink></li>
-        <li><NuxtLink to="/blogs">Blogs</NuxtLink></li>
         <li><NuxtLink to="/articles">Post</NuxtLink></li>
         <li><NuxtLink to="/sign-up">Sign-up</NuxtLink></li>
         <li><NuxtLink to="/login">Login</NuxtLink></li>

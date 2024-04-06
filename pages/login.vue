@@ -13,7 +13,7 @@ async function login() {
     });
     console.log("login", data, error);
     if (error) throw error;
-    router.push("/confirm");
+    router.push("./confirm");
   } catch (error) {
     errorMsg.value = error.message;
   }

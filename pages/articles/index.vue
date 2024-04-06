@@ -44,13 +44,7 @@ const closeBlog = () => {
           <button @click="closeBlog">Close Blog</button>
         </div>
        </div>
-        <!-- <NuxtLink @click="blogs(blog)"> {{ blog.title }}</NuxtLink> -->
-       <!-- <div v-if="blogs(blog)">
-          <h2>{{ blog.title }}</h2>
-          <p>{{ blog.description }}</p>
-       </div> -->
-       <!-- <NuxtLink to=>{{ blog.title }}</NuxtLink> -->
-      </li>
+    </li>
     </ul>
   </section>
 </template>

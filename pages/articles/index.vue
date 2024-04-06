@@ -3,15 +3,8 @@ import { ref } from 'vue';
 const supabase = useSupabaseClient();
 const user = useSupabaseUser();
 const router = useRouter();
-// if (user.value === null){
-//   router.push('/error')
-// }
 const { data: blogs } = await useAsyncData("blogs", async () => {
   const { data } = await supabase.from("blogs").select("*");
-  // data.map((blog) => {
-  //   const slug = slugify(blog.title);
-  //   blog.slug = slug;
-  // });
   return data;
 
 })
